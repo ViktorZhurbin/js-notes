@@ -1,3 +1,12 @@
+### Terminology: parameters vs. arguments
+
+The term parameter and the term argument basically mean the same thing. If you want to, you can make the following distinction:
+
+- **Parameters are part of a function definition**. They are also called *formal parameters* and *formal arguments*.
+
+- **Arguments are part of a function call**. They are also called *actual parameters* and *actual arguments*.
+
+
 ### Never add a newline between return and the value
 
 For a long expression in return, it might be tempting to put it on a separate line, like this:
@@ -45,24 +54,3 @@ Function starting with…
 Functions should be short and do exactly one thing suggested by its name, no more.
 
 A small function is not only easier to test and debug – it's easier to understand what it does by just reading the name.
-
-### Function Expression vs Function Declaration
-A Function Expression is created when the execution reaches it and is usable only from that moment.
-A Function Declaration can be called earlier than it is defined. When JavaScript prepares to run the script, it first looks for global Function Declarations in it and creates the functions. And after all Function Declarations are processed, the code is executed. So it has access to these functions.
-
-For example, this works:
-```js
-sayHi("John"); // Hello, John
-
-function sayHi(name) {
-  alert( `Hello, ${name}` );
-}
-```
-This doesn't:
-```js
-sayHi("John"); // error!
-
-let sayHi = function(name) {  // (*) no magic any more
-  alert( `Hello, ${name}` );
-};
-```
