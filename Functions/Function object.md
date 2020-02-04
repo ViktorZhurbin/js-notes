@@ -1,4 +1,4 @@
-# Function object, NFE
+# Function object
 In JavaScript, functions are objects.
 
 ### The “name” property
