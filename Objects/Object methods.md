@@ -6,10 +6,11 @@ let user = {
   age: 30
 };
 
-user.sayHi = function() { // sayHi is a method of the object user.
+user.sayHi = function() {
   alert("Hello!");
 };
 
+// sayHi is now a method of the object user.
 user.sayHi(); // Hello!
 ```
 
