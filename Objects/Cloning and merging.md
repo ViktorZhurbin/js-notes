@@ -7,7 +7,7 @@ let user = {
   age: 30
 };
 
-let clone2 = Object.assign({}, user);
+let clone = Object.assign({}, user);
 // OR
 let clone2 = { ...user };
 ```
@@ -37,8 +37,8 @@ user = { ...permissions1, ...permissions2, ...name };
     padding: 10px;">
   <strong>Note:</strong>
 
-  `Object.assign()` and Spread syntax go only one level deep. Therefore, it may be unsuitable for copying multidimensional arrays or nested objects.
-</div>
+`Object.assign()` and Spread syntax go only one level deep. Therefore, it may be unsuitable for copying multidimensional arrays or nested objects.
+
 ```js
 let user = {
   name: "John",
@@ -57,3 +57,4 @@ user.sizes.height // 190
 ```
 
 To fix this, we need to use deep cloning algorythm, like `_.cloneDeep(obj)` from lodash.
+</div>
