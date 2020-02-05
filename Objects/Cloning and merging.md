@@ -28,7 +28,17 @@ user = { ...permissions1, ...permissions2, ...name };
 // now user = { name: "Pete", canView: true, canEdit: true }
 ```
 
-Nested objects are trickier:
+<div style="background: #fff3d4;
+    border-color: #f6b73c;
+    padding-left: 25px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    margin-bottom: 20px;
+    padding: 10px;">
+  <strong>Note:</strong>
+
+  `Object.assign()` and Spread syntax go only one level deep. Therefore, it may be unsuitable for copying multidimensional arrays or nested objects.
+</div>
 ```js
 let user = {
   name: "John",
