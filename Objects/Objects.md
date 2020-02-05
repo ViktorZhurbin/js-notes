@@ -7,20 +7,20 @@ const user = {
  }
  ```
 
-To remove a property, we can use delete operator:
+To remove a property, we can use `delete` operator:
 ```js
 delete user.age;
 ```
 
 ### Existence check
-Usually we check property exists by comparing it to `undefned`
+Usually we check that property exists by comparing it to `undefned`
 ```js
 let user = {};
 
 user.noSuchProperty === undefined; // true means "no such property"
 ```
 
-There also exists a special operator `in` to check for the existence of a property:
+There is also a special operator `in` to check for the existence of a property:
 ```js
 let user = { name: "John", age: 30 };
 
@@ -30,11 +30,11 @@ let user = { name: "John", age: 30 };
 
 <div style="border: 3px #f5f2f0 solid; padding: 20px; border-radius: 10px">
 
-<b>Using “in” for properties that store undefined</b>
+**Using `in` for properties that store `undefined`**
 
-Usually, the strict comparison `=== undefined` check the property existence just fine. But there’s a special case when it fails, but `in` works correctly.
+Usually, the `=== undefined` check is just fine. But there’s a special case when it fails, but `in` works correctly.
 
-It’s when an object property exists, but stores undefined:
+It’s when an object property exists, but stores `undefined`:
 ```js
 let obj = {
   test: undefined
@@ -55,7 +55,7 @@ Are objects ordered? In other words, if we loop over an object, do we get all pr
 
 The short answer is: “ordered in a special fashion”:
 - integer properties are sorted
-- others appear in creation order.
+- others appear after them in creation order.
 
 By *integer properties* we mean a string that can be converted to-and-from an integer without a change.
 
@@ -87,7 +87,7 @@ let user = { name: "John" };
 
 let admin = user; // copy the reference
 ```
-Now we have two variables, each one with the reference to the same object. We can use any variable to access the cabinet and modify its contents:
+Now we have two variables, each one with the reference to the same object. We can use any variable to modify object:
 ```js
 let user = { name: 'John' };
 let admin = user;
