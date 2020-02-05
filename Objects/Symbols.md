@@ -7,7 +7,7 @@ A value of this type can be created using `Symbol()`:
 let id = Symbol();
 ```
 
-Upon creation, we can give symbol a description (also called a symbol name), mostly useful for debugging purposes:
+Upon creation, we can give symbol a **description (also called a symbol name)**, mostly useful for debugging purposes:
 ```js
 // id is a symbol with the description "id"
 let id = Symbol("id");
@@ -36,22 +36,22 @@ alert(id); // TypeError: Cannot convert a Symbol value to a string
 If we really want to show a symbol, we need to explicitly call `.toString()` on it, like here:
 
 ```js
-let id = Symbol("id");
-alert(id.toString()); // Symbol(id), now it works
+let id = Symbol("tag");
+alert(id.toString()); // Symbol(tag), now it works
 ```
 
 Or get `symbol.description` property to show the description only:
 
 ```js
-let id = Symbol("id");
-alert(id.description); // id
+let id = Symbol("tag");
+alert(id.description); // tag
 ```
 </div>
 
 ### “Hidden” properties
 Symbols allow us to create “hidden” properties of an object, that no other part of code can accidentally access or overwrite.
 
-For instance, if we’re working with user objects, that belong to a third-party code. We’d like to add identifiers to them:
+For instance, if we’re working with user objects, that belong to a third-party code, and we’d like to add identifiers to them:
 ```js
 let user = { // belongs to another code
   name: "John"
@@ -86,7 +86,7 @@ Symbols are skipped by `for…in`, `Object.keys()`, but are copied by `Object.as
 
 ## Global symbols
 #### Symbol.for
-We can create symbols in the global symbol registry and access them later. It guarantees that repeated accesses by the same name return exactly the same symbol.
+We can create symbols in the **global symbol registry** and access them later. It guarantees that repeated accesses by the same name return exactly the same symbol.
 
 In order to read (create if absent) a symbol from the registry, use `Symbol.for(key)`.
 
