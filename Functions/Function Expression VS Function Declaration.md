@@ -18,7 +18,7 @@ const ordinary3 = function myName(a, b, c) {
 };
 ```
 
-In case of object methods, an ordinary function is initialized with its own `this=undefined`, which shadows `this` of the object:
+In case of object methods, an ordinary function is initialized with its own `this`:
 ```js
 const person = {
     name: 'Jill',
@@ -32,13 +32,11 @@ person.ordinaryFunc(); // TypeError: Cannot read property 'name' of undefined
 person.arrowFunc(); // 'Jill'
 ```
 
-### The Special Variable `arguments`
-
 ### Function Expression VS Function Declaration
 
 A Function Expression is created when the execution reaches it and is usable only from that moment.
 
-A Function Declaration can be called earlier than it is defined (hoisted). When JavaScript prepares to run the script, it first looks for global Function Declarations in it and creates the functions. And after all Function Declarations are processed, the code is executed. So it has access to these functions bfore they are declared.
+A Function Declaration can be called earlier than it is defined (it's "hoisted"). When JavaScript prepares to run the script, it first looks for global Function Declarations in it and creates the functions. And after all Function Declarations are processed, the code is executed. So it has access to these functions before they are declared.
 
 For example, this works:
 ```js

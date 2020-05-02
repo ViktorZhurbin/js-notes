@@ -31,7 +31,7 @@ alert(user.sayBye.name); // sayBye
   ```
 
 ### The “length” property
-Property “length” that returns the number of function parameters, for instance:
+Property “length” returns the number of function parameters:
 ```js
 function f1(a) {}
 function f2(a, b) {}

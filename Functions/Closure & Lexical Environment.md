@@ -13,14 +13,11 @@ Lexical Environment consists of two parts:
 <br />
 
 - **Reference to the outer Lexical Environment**, the one associated with the outer code.
-<sub>Global Lexical Environment has no outer reference (equals `null`). </sub>
+<sub>Outer reference for Global Lexical Environment equals `null`. </sub>
 <br />
 
 ### Function Declarations
-A function is also a value, like a variable.
-
-**The difference is that a Function Declaration is instantly fully initialized.**
-We can use a function, declared as Function Declaration, even before the declaration itself.
+A function is also a value, like a variable. The difference is that a **Function Declaration is instantly fully initialized**. We can use a function, declared as Function Declaration, even before the declaration itself.
 
 This does not apply to Function Expression and Arrow Function since they are assigned to variables.
 
@@ -70,8 +67,8 @@ All functions have the hidden property named `[[Environment]]`, that keeps the r
 
 The `[[Environment]]` reference is set once and forever at function creation time.
 
-If we call `counter()`, we initialize it with `[[Environment]]` in which `count = 0`. First, it looks for `count` in its own LE, doesn't find it and looks in the `[[Environment]]`.
+If we call `counter()`, we initialize it with Lexical Environment in which `count = 0`. First, it looks for `count` in its own `[[Environment]]`, doesn't find it and looks in the outer `[[Environment]]` (where `count = 0`).
 
 **A variable is updated in the Lexical Environment where it lives.**
 
-So `count` is updated in the `[[Environment]]` property. If we call `counter()` multiple times, the count variable will be increased to 2, 3 and so on, at the same place.
+So `count` is updated in the outer `[[Environment]]` property. If we call `counter()` multiple times, the count variable will be increased to 2, 3 and so on, at the same place.

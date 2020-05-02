@@ -6,9 +6,9 @@ function mul(a, b) {
   return a * b;
 }
 
-let double1 = mul.bind(null, 2);
+let double = mul.bind(null, 2);
 // Same with arrow function
-let double2 = a => mul(a, 2);
+let double = a => mul(a, 2);
 
 alert( double(3) ); // = mul(2, 3) = 6
 alert( double(4) ); // = mul(2, 4) = 8
@@ -21,6 +21,4 @@ That’s called *partial function application* – we create a new function by f
 
 The benefit is that we can create an independent function with a readable name (`double`, `triple`). We can use it and not provide the first argument every time.
 
-In other cases, partial application is useful when we have a very generic function and want a less universal variant of it for convenience.
-
-For instance, we have a function `send(from, to, text)`. Then, inside a `user` object we may want to use a partial variant of it: `sendTo(to, text)` that sends from the current user.
+In other cases, partial application is useful when we have a very generic function and want a less universal variant of it for convenience. For instance, we have a function `send(from, to, text)`. Then, inside a `user` object we may want to use a partial variant of it: `sendTo(to, text)` that sends from the current user.
