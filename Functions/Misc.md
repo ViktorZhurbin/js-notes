@@ -9,19 +9,19 @@ The term parameter and the term argument basically mean the same thing. If you w
 
 ### Never add a newline between return and the value
 
-For a long expression in return, it might be tempting to put it on a separate line, like this:
+For a long expression in `return`, it might be tempting to put it on a separate line, like this:
 ```js
 return
     (some + long + expression + or + whatever * f(a) + f(b))
  ```
-That doesn’t work, because JavaScript assumes a semicolon after return. That’ll work the same as:
+That doesn’t work, because JavaScript assumes a **`;`** after `return`. That’ll work the same as:
 ```js
 return; // note ;
     (some + long + expression + or + whatever * f(a) + f(b))
  ```
-So, it effectively becomes an empty return.
+So, it effectively becomes an empty `return`.
 
-If we want the returned expression to wrap across multiple lines, we should start it at the same line as return. Or at least put the opening *parentheses* there as follows:
+If we want the returned expression to wrap across multiple lines, we should start it at the same line as `return`. Or at least put `()` there as follows:
 
 ```js
 return (
