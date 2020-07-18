@@ -1,3 +1,5 @@
+https://whatthefork.is/closure
+
 # Closure & Lexical Environment
 >A closure is a function that remembers its outer variables and can access them.
 
